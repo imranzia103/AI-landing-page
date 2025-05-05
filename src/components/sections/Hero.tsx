@@ -1,5 +1,5 @@
 
-export const Footer = () => {
+export const Hero = () => {
 
     return<section></section>
     
