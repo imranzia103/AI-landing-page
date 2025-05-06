@@ -1,6 +1,8 @@
 import { Container } from "../shared/Container";
 import { BtnLink } from "../shared/BtnLink";
 import { NavItems } from "../shared/NavItems";
+import { useThemeStore } from "../../store/themeStore";
+
 
 
 
@@ -14,7 +16,8 @@ const navItems = [
   { href: "#features", text: "Features" },
 ];
 
-export const Navbar = () => {
+export const Navbar  = () => {
+  const { toggleTheme, theme } = useThemeStore();
   return (
     <header className=" absolute inset-x-0 top-0 p-y-6 z-50">
       <Container>
@@ -59,25 +62,48 @@ export const Navbar = () => {
             </div>
 <div className=" min-w-max flex items-center gap-x-3">
 
-<button className=" outline-hidden flex relative text-heading-2 rounded-full p-2
+<button onClick={toggleTheme} 
+className=" outline-hidden flex relative text-heading-2 rounded-full p-2
 lg:p-3 border border-box-border cursor-pointer">
 
 
 
-<svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"
-                  />
-                </svg>
+              
+                  
+                  
+{theme === "dark" ? (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth="1.5"
+    stroke="currentColor"
+    className="w-6 h-6"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"
+    />
+  </svg>
+) : (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth="1.5"
+    stroke="currentColor"
+    className="w-6 h-6"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M12 3v1.5m0 15V21m8.25-9h-1.5M3 12h1.5m14.85-7.5l-.75.75m-13.5 13.5l-.75-.75m15.75 0l-.75-.75m-13.5 0l-.75.75M12 3a9 9 0 100 18 9 9 0 000-18z"
+    />
+  </svg>
+)}
+      
+                
 
 
 
@@ -100,3 +126,4 @@ lg:p-3 border border-box-border cursor-pointer">
     </header>
   );
 };
+
