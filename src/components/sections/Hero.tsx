@@ -25,6 +25,7 @@ export const Hero = () => {
             </span>
           </h1>
 
+          <div>
           <p className="mt-8">
             Our AI solutions are designed to help you streamline your
             operations, enhance customer experiences, and drive growth. Whether
@@ -32,49 +33,55 @@ export const Hero = () => {
             improve decision-making, we have the expertise and tools to help you
             succeed.
           </p>
-
-
-<div className="mt-10 w-full flex max-w-md mx-auto lg:mx-0 ">
-<div className="flex sm:flex-row flex-col gap-4 w-full">
-
-
-<form action="#" className=" py-1 pl-6 w-full pr-1 flex gap-3 items-center text-heading-3
-shadow-lg shadow-box-shadow border border-box-border
-bg-box-bg rounded-full ease-linear focus-within:bg-body
- focus-within:border-primary">
-  <span className=" min-w-max pr-2 border-r border-box-border py-2 ml-5">
-
-
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      className="h-5 w-5"
-      viewBox="0 0 20 20"
-      fill="currentColor"
-      aria-hidden="true"
-    >
-      <path
-        fillRule="evenodd"
-        d="M11.742 2.343a7.5 7.5 0 1 1-9.9 9.9A7.5 7.5 0 0 1 11.742 2.343zm-.707 8.536a4.5 4.5 0 1 0-6.364-6.364A4.5 4.5 0 0 0 11.035 10.88z"
-        clipRule="evenodd"
-      />
-    </svg>
-
-</span>
-    
-
-<input type="email" placeholder=" imranzia103@gmail.com" 
-className="w-full py-3 outline-none bg-transparent"/>
-
-</form>
-
-
-
-
 </div>
+          <div className="mt-10 w-full flex max-w-md mx-auto lg:mx-0 ">
+            <div className="flex sm:flex-row flex-col gap-4 w-full">
+              <form
+                action="#"
+                className=" py-1 pl-6 w-full pr-1 flex gap-3 items-center text-heading-3
+                                  shadow-lg shadow-box-shadow border border-box-border
+                              bg-box-bg rounded-full ease-linear focus-within:bg-body
+                              focus-within:border-primary"
+                          >
+                <span className=" min-w-max pr-2 border-r border-box-border py-2 ml-5">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M11.742 2.343a7.5 7.5 0 1 1-9.9 9.9A7.5 7.5 0 0 1 11.742 2.343zm-.707 8.536a4.5 4.5 0 1 0-6.364-6.364A4.5 4.5 0 0 0 11.035 10.88z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </span>
 
-</div>
+                <input
+                  type="email"
+                  placeholder=" imranzia103@gmail.com"
+                  className="w-full py-3 outline-none bg-transparent"
+                />
+                <button className=" min-w-max text-white">
+                  <span className="relative z-[5]">
+                    Get started
+                  </span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
 
-
+        <div className="flex flex-1 lg:w-1/2 lg:h-auto lg:max-w-non lg:mx-0 mx-auto max-w-3xl">
+          <img
+            src="./src/assets/images/Robot.png"
+            alt="hero-image"
+            width={2350}
+            height={2359}
+            className="lg:absolute lg:w-full lg:h-full rounded-3xl object-cover lg:max-h-non mx-h-96"
+          />
         </div>
       </Container>
     </section>
